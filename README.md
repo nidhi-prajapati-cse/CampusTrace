@@ -7,12 +7,15 @@ CampusTrace is a Lost and Found Item Management Web Application designed for cam
 - Post lost or found item reports
 - Real-time chat between item owners and finders
 - View and search all reports
-- User authentication and profiles
+- Flag inappropriate or suspicious reports
+- User authentication and profile management
 - Image uploads for items
+- Admin Dashboard for managing users and reports
+- User dashboard for managing personal reports and profile
 
 ## 🛠 Tech Stack
 
-- **Frontend**: React.js, Tailwind CSS
+- **Frontend**: React.js,CSS
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Real-time**: Socket.io
