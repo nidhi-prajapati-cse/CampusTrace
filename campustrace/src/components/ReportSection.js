@@ -21,7 +21,7 @@ const ReportSection = () => {
   // Fetch items from DB
   const fetchReports = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/items");
+      const res = await axios.get("https://campustrace-backend.onrender.com/api/items");
       if (res.data.success) {
         setReports(res.data.items || []);
       } else {
@@ -44,7 +44,7 @@ const ReportSection = () => {
   // Delete item from DB
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:5000/api/items/${id}`);
+      const res = await axios.delete(`https://campustrace-backend.onrender.com/api/items/${id}`);
       if (res.data.success) {
         setReports(prev => prev.filter(report => report._id !== id));
         setMessage('Report deleted successfully!');

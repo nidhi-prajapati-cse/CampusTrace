@@ -26,7 +26,7 @@ const UserHome = () => {
     if (!user?._id) return;
     const fetchUserInfo = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/users/${user._id}`);
+        const res = await axios.get(`https://campustrace-backend.onrender.com/api/users/${user._id}`);
         if (res.data.success) {
           setUserInfo(res.data.user);
           setEditableInfo(res.data.user);
@@ -70,7 +70,7 @@ const UserHome = () => {
         });
       }
 
-      const res = await axios.put(`http://localhost:5000/api/users/${user._id}`, formData, {
+      const res = await axios.put(`https://campustrace-backend.onrender.com/api/users/${user._id}`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 
@@ -101,10 +101,10 @@ const UserHome = () => {
     ? (editableInfo.image instanceof File
       ? URL.createObjectURL(editableInfo.image)
       : editableInfo.image
-        ? `http://localhost:5000${editableInfo.image}?t=${Date.now()}`
+        ? `https://campustrace-backend.onrender.com${editableInfo.image}?t=${Date.now()}`
         : defaultimage)
     : (userInfo.image
-      ? `http://localhost:5000${userInfo.image}?t=${Date.now()}`
+      ? `https://campustrace-backend.onrender.com${userInfo.image}?t=${Date.now()}`
       : defaultimage);
 
   return (
@@ -219,7 +219,7 @@ const UserHome = () => {
           <div className="zoom-container" onClick={(e) => e.stopPropagation()}>
             <img
               src={userInfo.image
-                ? `http://localhost:5000${userInfo.image}?t=${Date.now()}`
+                ? `https://campustrace-backend.onrender.com${userInfo.image}?t=${Date.now()}`
                 : defaultimage}
               alt="Zoomed Profile"
               className="zoomed-image"

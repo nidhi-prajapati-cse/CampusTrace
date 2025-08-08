@@ -17,7 +17,7 @@ const ManageUsers = () => {
     window.scrollTo(0, 0); 
     const fetchUsers = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/users'); 
+        const res = await axios.get('https://campustrace-backend.onrender.com/api/users'); 
         setUsers(res.data.users || []); // ✅ Make sure your backend returns { users: [...] }
       } catch (err) {
         console.error('Error fetching users:', err);
@@ -34,7 +34,7 @@ const ManageUsers = () => {
   
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:5000/api/users/${id}`);
+      const res = await axios.delete(`https://campustrace-backend.onrender.com/api/users/${id}`);
       if (res.data.success) {
         setUsers(prev => prev.filter(user => user._id !== id));
         setMessage('User deleted successfully!');

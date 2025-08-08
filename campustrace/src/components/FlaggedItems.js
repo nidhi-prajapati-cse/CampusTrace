@@ -20,7 +20,7 @@ const FlaggedItems = () => {
     window.scrollTo(0, 0);
     const fetchFlaggedItems = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/flags');
+        const res = await axios.get('https://campustrace-backend.onrender.com/api/flags');
         const formatted = res.data.map(flag => ({
           _id: flag._id,
           reason: flag.reason,
@@ -55,8 +55,8 @@ const FlaggedItems = () => {
   // Delete entire item
   const handleDeleteItem = async (itemId, flagId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/items/${itemId}`);
-      await axios.delete(`http://localhost:5000/api/flags/${flagId}`);
+      await axios.delete(`https://campustrace-backend.onrender.com/api/items/${itemId}`);
+      await axios.delete(`https://campustrace-backend.onrender.com/api/flags/${flagId}`);
       setFlaggedData(flaggedData.filter(flag => flag._id !== flagId));
       setMessage('Item deleted ✅');
     } catch (error) {
@@ -68,7 +68,7 @@ const FlaggedItems = () => {
   // Delete only flag
   const handleRemoveFlagOnly = async (flagId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/flags/${flagId}`);
+      await axios.delete(`https://campustrace-backend.onrender.com/api/flags/${flagId}`);
       setFlaggedData(flaggedData.filter(flag => flag._id !== flagId));
       setMessage('Flag removed ✅');
     } catch (error) {

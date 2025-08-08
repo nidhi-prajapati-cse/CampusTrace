@@ -11,7 +11,7 @@ export const ChatProvider = ({ children }) => {
   const [contacts, setContacts] = useState([]);
 
   useEffect(() => {
-    const newSocket = io("http://localhost:5000");
+    const newSocket = io("https://campustrace-backend.onrender.com");
     setSocket(newSocket);
 
     newSocket.on("receiveMessage", (msg) => {
@@ -38,7 +38,7 @@ export const ChatProvider = ({ children }) => {
             lastMessageTime: Date.now(),
           });
 
-          fetch(`http://localhost:5000/api/users/${msg.senderId}`)
+          fetch(`https://campustrace-backend.onrender.com/api/users/${msg.senderId}`)
             .then((res) => res.json())
             .then((userData) => {
               setContacts((prev) =>
@@ -67,7 +67,7 @@ export const ChatProvider = ({ children }) => {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/messages/contacts/${loggedInUserId}`
+        `https://campustrace-backend.onrender.com/api/messages/contacts/${loggedInUserId}`
       );
       const data = await res.json();
 
@@ -89,7 +89,7 @@ export const ChatProvider = ({ children }) => {
 
       if (userIds.length > 0) {
         const userDetailsRes = await fetch(
-          `http://localhost:5000/api/users/bulk?ids=${userIds}`
+          `https://campustrace-backend.onrender.com/api/users/bulk?ids=${userIds}`
         );
         const userDetailsData = await userDetailsRes.json();
 
@@ -111,7 +111,7 @@ export const ChatProvider = ({ children }) => {
       );
       if (selfIndex === -1) {
         const selfRes = await fetch(
-          `http://localhost:5000/api/users/${loggedInUserId}`
+          `https://campustrace-backend.onrender.com/api/users/${loggedInUserId}`
         );
         const selfUser = await selfRes.json();
         enrichedContacts.unshift({

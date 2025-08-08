@@ -30,7 +30,7 @@ const ViewItems = () => {
         const storedUser = localStorage.getItem("user");
         const parsedUser = storedUser ? JSON.parse(storedUser) : null;
         const loggedInUserId = parsedUser?._id;
-        const res = await axios.get("http://localhost:5000/api/items");
+        const res = await axios.get("https://campustrace-backend.onrender.com/api/items");
         let allItems = Array.isArray(res.data) ? res.data : res.data.items || [];
         const filteredItems = allItems.filter(item => {
           const itemUserId = item.userId?._id || item.userId;

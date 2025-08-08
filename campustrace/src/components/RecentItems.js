@@ -15,7 +15,7 @@ const RecentItems = () => {
   useEffect(() => {
     const fetchRecentItems = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/items?limit=6&sort=desc');
+        const res = await axios.get('https://campustrace-backend.onrender.com/api/items?limit=6&sort=desc');
         const formattedItems = Array.isArray(res.data) ? res.data : res.data.items || [];
         setRecentItems(formattedItems);
       } catch (err) {

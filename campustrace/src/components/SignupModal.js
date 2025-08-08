@@ -29,13 +29,13 @@ const SignupModal = ({ isOpen, onClose, onLoginSuccess, openLogin }) => {
     };
 
     try {
-      const signupRes = await axios.post('http://localhost:5000/api/users/signup', userData);
+      const signupRes = await axios.post('https://campustrace-backend.onrender.com/api/users/signup', userData);
       if (!signupRes.data.success) {
         setErrorMessage(signupRes.data.message || 'Signup failed. Try again.');
         setIsConfirmOpen(true);
         return;
       }
-      const loginRes = await axios.post('http://localhost:5000/api/users/login', {
+      const loginRes = await axios.post('https://campustrace-backend.onrender.com/api/users/login', {
         email: userData.email,
         password: userData.password,
       });

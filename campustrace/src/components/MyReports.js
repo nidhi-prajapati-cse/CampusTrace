@@ -19,7 +19,7 @@ const MyReports = () => {
     const fetchReports = async () => {
       if (!user || !user._id) return;
       try {
-        const res = await axios.get(`http://localhost:5000/api/items/user/${user._id}`);
+        const res = await axios.get(`https://campustrace-backend.onrender.com/api/items/user/${user._id}`);
         if (res.data.success) {
           setReports(res.data.reports || []);
         } else {
@@ -41,7 +41,7 @@ const MyReports = () => {
 
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:5000/api/items/${id}`);
+      const res = await axios.delete(`https://campustrace-backend.onrender.com/api/items/${id}`);
       if (res.data.success) {
         setReports((prev) => prev.filter((report) => report._id !== id));
         setMessage('Report deleted successfully!');

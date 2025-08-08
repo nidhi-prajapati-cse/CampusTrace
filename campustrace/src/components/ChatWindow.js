@@ -49,7 +49,7 @@ const ChatWindow = ({ loggedInUserId }) => {
 
     const fetchMessages = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/messages/${roomId}`);
+        const res = await fetch(`https://campustrace-backend.onrender.com/api/messages/${roomId}`);
         const data = await res.json();
         setMessages(Array.isArray(data.messages) ? data.messages : []);
       } catch (error) {
@@ -116,7 +116,7 @@ const ChatWindow = ({ loggedInUserId }) => {
             filteredContacts.map((user) => {
               const isActive = activeChatUser?._id === user._id;
               const profileImage = user.image
-                ? `http://localhost:5000${user.image}`
+                ? `https://campustrace-backend.onrender.com${user.image}`
                 : defaultimg;
 
               return (

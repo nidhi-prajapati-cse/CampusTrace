@@ -30,7 +30,7 @@ const LoginModal = ({ isOpen, onClose, onLoginSuccess, openSignup }) => {
     };
 
     try {
-      const res = await axios.post('http://localhost:5000/api/users/login', credentials);
+      const res = await axios.post('https://campustrace-backend.onrender.com/api/users/login', credentials);
 
       if (res.data.success && res.data.user) {
         const loggedInUser = res.data.user;

@@ -4,7 +4,7 @@ import noimage from "../assets/noimage.jpg";
 
 const ItemCard = ({ item }) => {
   const imageUrl = item.image
-    ? `http://localhost:5000/uploads/item/${item.image}`
+    ? `https://campustrace-backend.onrender.com/uploads/item/${item.image}`
     : noimage;
   return (
     <div className='item-card'>

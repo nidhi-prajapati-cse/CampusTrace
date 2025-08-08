@@ -22,7 +22,7 @@ const ItemCardFull = ({ item, onDelete, showDelete, showFlag = true }) => {
   const displayName = item.userId?.name;
   const displayContact = item.contact || item.userId?.email || item.userPhone || 'N/A';
   const imageUrl = item.image
-    ? `http://localhost:5000/uploads/item/${item.image}`
+    ? `https://campustrace-backend.onrender.com/uploads/item/${item.image}`
     : noimage;
 
 
@@ -62,7 +62,7 @@ const ItemCardFull = ({ item, onDelete, showDelete, showFlag = true }) => {
         reason,
       };
 
-      const res = await axios.post("http://localhost:5000/api/flags", payload);
+      const res = await axios.post("https://campustrace-backend.onrender.com/api/flags", payload);
       if (res.status === 201) {
         setMessage("Item flagged successfully ✅");
 
