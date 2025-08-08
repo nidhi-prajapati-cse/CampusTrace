@@ -22,6 +22,5 @@ CampusTrace is a Lost and Found Item Management Web Application designed for cam
 
 1. Clone the repository:
 ```bash
-
 git clone https://github.com/nidhi-prajapati-cse/CampusTrace.git
 cd campustrace
