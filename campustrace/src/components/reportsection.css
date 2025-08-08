@@ -1,0 +1,50 @@
+.items-table-container {
+  margin: 30px;
+  
+  padding: 20px;
+  border-radius: 10px;
+}
+.reportsection h2{
+  text-align: center;
+}
+
+.reportsection h2{
+  margin-top: 20px;
+}
+
+.items-table-container h2{
+    text-align: center;
+}
+
+.status-cards-container{
+ display: flex;
+  justify-content: center;   
+  gap: 2rem;                
+  margin-top: 2rem;
+  flex-wrap: wrap; 
+}
+@media (max-width: 768px) {
+  .status-cards-container {
+    gap: 1rem;
+  }
+
+  .itemcardfull-grid {
+    grid-template-columns: 1fr; 
+  }
+
+  .items-table-container {
+    margin: 15px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reportsection {
+    padding: 10px;
+  }
+
+  
+  .status-cards-container{
+    display: none;
+  }
+}

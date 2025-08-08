@@ -1,0 +1,137 @@
+.recent-items {
+  padding: 40px 20px;
+  margin-top: 90px;
+  text-align: center;
+}
+
+.recent-items h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #FFD700;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.items-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  align-items: stretch;
+  justify-content: center;
+ 
+  flex:1;
+}
+
+.items-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* ✅ Card size optimized */
+.items-scroll-container > * {
+  flex: 0 0 auto;          
+  width: 250px;            
+  max-width: 90%;          
+  transition: transform 0.3s ease;
+}
+
+.items-scroll-container > *:hover {
+  transform: translateY(-5px); 
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(143, 138, 138, 0.5);
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(143, 138, 138, 0.8);
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
+.view-all-btn {
+  color: rgb(207, 205, 205);
+  background-color: #36a5f0;
+  padding: 10px 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #2980b9;
+}
+
+.no-msg {
+  font-size: 21px;
+  color: white;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 1024px) {
+  .items-scroll-container > * {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .items-scroll-container > * {
+    width: 180px;
+  }
+
+  .scroll-btn {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .recent-items h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .items-scroll-container > * {
+    width: 85%; 
+  }
+
+  .scroll-btn {
+    font-size: 16px;
+    padding: 6px;
+  }
+
+  .recent-items {
+    padding: 20px 10px;
+  }
+
+  .recent-items h2 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,23 @@
+.my-reports {
+  padding: 20px;
+  
+
+}
+
+.my-reports h2{
+  text-align: center;
+}
+
+.noreport-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; 
+  text-align: center;
+  color: #777; 
+}
+
+.noreport-text h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}

@@ -1,0 +1,60 @@
+
+.admin-page {
+  padding: 20px;
+  text-align: center;
+   overflow-x: auto;
+}
+
+.users-table {
+   width: 100%; 
+  
+  margin-top: 20px;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: rgb(186, 182, 182);
+}
+
+.users-table th, .users-table td {
+  padding: 12px;
+  border: 1px solid white;
+  
+}
+
+.users-table th {
+  background-color: rgb(110, 108, 108);
+  font-weight: bold;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.delete-btn:hover{
+  background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .users-table th, 
+  .users-table td {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .admin-page {
+    padding: 10px;
+  }
+  .delete-btn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  .contact-button {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,71 @@
+.flagged-items-container{
+  padding: 20px;
+}
+.flagged-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.flagged-meta-container {
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 5px;
+}
+.flagged-items-container h2{
+  text-align: center;
+}
+.flagged-meta {
+  background-color: rgb(171, 169, 169);
+  padding: 15px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flagged-btncontainer-wrapper {
+  background-color: rgb(171, 169, 169);
+  padding: 3px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.flagged-btncontainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+  width: 100%;
+  margin-top: auto;
+  padding-right: 25px;
+  margin-bottom: 5px;
+}
+
+.contactbtn {
+  border-radius: 50%;
+  color: white;
+  border: none;
+  background-color: #147ff2ba;
+  padding: 8px 10px;
+  font-size: 10px;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.personflag {
+  color: rgb(63, 13, 243);
+}
+.reason {
+  color: rgba(198, 33, 33, 0.685);
+}

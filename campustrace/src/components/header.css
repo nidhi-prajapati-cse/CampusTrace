@@ -1,0 +1,163 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+.logo:hover{
+  cursor: pointer;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.navbar-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  cursor: pointer;
+}
+.btna {
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+}
+
+.signup-btn {
+  background-color: #4CAF50;
+ 
+  
+}
+.signup-btn:hover{
+  background-color: #3d8f40;
+}
+.login-btn {
+  background-color: #1E90FF;
+  
+}
+.login-btn:hover{
+  background-color: #186dc1;
+}
+.left-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.admindash ,.userdash{
+  background-color: rgb(28, 194, 62);
+}
+.admindash:hover ,.userdash:hover{
+  background-color: rgb(14, 169, 45);
+}
+.logout-btn{
+  background-color:rgb(240, 41, 80);
+}
+.logout-btn:hover{
+  background-color:crimson;
+}
+.toggle-icon {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  margin-right: 5px;
+}
+
+.admin-greeting {
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.admin-greeting p{
+  font-size: 18px;
+  margin-top: 10px;
+}
+.dark-toggle button {
+  background: transparent;
+  color: inherit;
+  box-shadow: 0 4px 8px 0 rgba(128, 128, 128, 0.5);
+  transition: box-shadow 0.3s ease;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-top: 6px;
+  border: 2px solid grey;  
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 10px 16px;
+    flex-wrap: wrap;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
+  .navbar-buttons {
+    gap: 8px;
+  }
+
+  .btna {
+    font-size: 16px;
+    padding: 8px 14px;
+  }
+
+  .dark-toggle button {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-greeting {
+    gap: 12px;
+    justify-content: center; 
+  }
+  .btna{
+    font-size: 12px;
+    padding: 5px;
+  }
+  .dark-toggle button {
+    margin: 0;
+    padding: 6px 10px;
+    font-size: 14px; 
+  }
+    .admin-greeting p {
+    display: none;
+  }
+  .logout-btn{
+    display: none;
+  }
+  .logo-text {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,149 @@
+.view-items-container {
+  padding: 120px 20px;
+  background-color:#f1f3f5;
+  margin-bottom: -70px;
+  min-height: 100vh;
+  
+}
+
+.view-items-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+
+  box-shadow: 0 4px 8px 0 rgba(128, 128, 128, 0.5);
+  transition: box-shadow 0.3s ease;
+ 
+}
+
+.filters button.active,
+.filters button:hover ,.date-filter:hover{
+  cursor: pointer;
+}
+.date-filter:hover,.date-filter:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  background-color:#2b70d7 ;
+}
+
+.date-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  background-color: #4a8cef;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(128, 128, 128, 0.5);
+  transition: box-shadow 0.3s ease;
+  
+  
+}
+
+.date-filter input[type="date"] {
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.no-items-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #666;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.allbutton{
+  background-color: #70777d;
+}
+.lostbutton{
+  background-color: #e73a4b;
+}
+.foundbutton{
+  background-color: #28a745;
+}
+.clearbutton{
+  background-color: #87cefa;
+}
+.locationbutton{
+  background-color: rgba(179, 46, 16, 0.8);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  width: 150px;
+  box-shadow: 0 4px 8px 0 rgba(128, 128, 128, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.allbutton:hover{
+  background-color: #494d51;
+}
+.lostbutton:hover{
+  background-color: #db2739;
+}
+.foundbutton:hover{
+  background-color: #218939;
+}
+.clearbutton:hover{
+  background-color:#64aad5;
+}
+.locationbutton:hover,.locationbutton:focus{
+  background-color: rgba(124, 26, 4, 0.8);
+  cursor: pointer;
+}
+
+.view-item-searchbox{
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 200px;
+  background-color:  rgba(250, 166, 63, 0.993);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(128, 128, 128, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.view-item-searchbox:hover{
+  background-color:  rgba(226, 147, 49, 0.993);
+
+}
+.view-item-searchbox::placeholder{
+  color: white;
+  opacity: 1;
+}

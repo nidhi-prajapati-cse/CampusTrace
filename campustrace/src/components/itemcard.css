@@ -1,0 +1,54 @@
+.items-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.item-card {
+  
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.2s ease;
+   background-color: #00000080;
+}
+
+.item-card:hover {
+  transform: scale(1.03);
+}
+
+.item-image {
+  width: 100%;
+  height: 180px;
+  object-fit:contain;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.itemtext-title {
+  margin: 4px 0 8px;
+  font-size: 18px;
+  color: white;
+  
+}
+
+.item-location,
+.item-date {
+  margin: 4px 0;
+  font-size: 14px;
+  color: white;
+  
+}
+
+.itemcard-details{
+  
+  font-weight: bold;
+  border-radius: 5px;
+  opacity: 0.7;
+
+
+}

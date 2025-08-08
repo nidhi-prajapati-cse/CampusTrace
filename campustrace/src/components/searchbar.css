@@ -1,0 +1,32 @@
+.search-bar {
+  display: flex;
+  justify-content: center;
+   margin: -20px auto 0 auto; /* <-- centers the entire bar */
+  width: fit-content;  
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #ccc;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: rgb(96, 95, 95);
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  .search-bar {
+    width: 70%;
+    font-size: 14px;
+    justify-content: center;
+  }
+  .search-bar input {
+    width: 80%;
+  }
+}

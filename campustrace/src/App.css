@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body.dark-mode .header-container {
+  background-color: #393636;
+  color: white;
+}
+body.dark-mode .signupbox{
+   background-color: rgb(88, 83, 83);
+   color: white;
+}
+
+body.dark-mode .logo-text{
+  color: white;
+}
+
+body.dark-mode .view-items-container{
+  background-color: rgb(35, 32, 32);
+}
+
+body.dark-mode .toggle-icon{
+  color: white;
+}
+body.dark-mode .sidebar{
+  background-color: #393636;
+}
+
+body.dark-mode .admin-container {
+  background-color: rgb(35, 32, 32);
+  color: white;
+}
+body.dark-mode .flag-modal{
+  background-color: #393636;
+  color: white;
+}
+body.dark-mode .confirm-modal{
+  background-color: #393636;
+  color: white;
+}
+body.dark-mode .dark-close{
+  color: white;
+}
+body.dark-mode .clsbtn{
+  color: white;
+}
+body.dark-mode .tabletext{
+  color: black;
+}
+body.dark-mode .user-profile-name{
+  color: rgb(88, 83, 83);
+}
+body.dark-mode .reportmodal-container{
+  background-color: rgb(88, 83, 83);
+}
+body.dark-mode .reportmodal-container h2{
+  color: white;
+}
+body.dark-mode .chat-right-panel{
+  background-color: rgb(49, 46, 46);
+}
+body.dark-mode .chat-left-panel,body.dark-mode .chat-input{
+  background-color: rgb(90, 88, 88);
+}
+body.dark-mode  .chat-input input{
+  background-color: rgb(132, 129, 129);
+  
+}
+body.dark-mode  .chat-input input::placeholder{
+  color: white;
+  
+}
+body.dark-mode .active{
+  background-color: rgb(65, 63, 63);
+}
+body.dark-mode .chat-user{
+  color: white;
+}
+html {
+  overflow-y: scroll;
+}
+@media (max-width: 768px) {
+  .confirm-modal {
+  width: 70vw;
+  padding: 15px 25px;
+  
+  
+}
+
+.confirm-modal p {
+  font-size: 18px;
+  
+}
+
+.confirm-buttons {
+  font-size: 18px;
+}}
+@media (max-width: 480px) {
+  .confirm-modal {
+ 
+  padding: 10px 20px;
+  width: 70vw;
+  
+}
+
+.confirm-modal p {
+  font-size: 16px;
+  
+}
+
+.confirm-buttons {
+ 
+  font-size: 14px;
+}}
