@@ -5,6 +5,7 @@
   min-height: 100vh;
 }
 
+
 @media (max-width: 480px) {
   .admin-container h2{
     font-size: 24px;

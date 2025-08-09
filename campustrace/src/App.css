@@ -27,7 +27,9 @@ body.dark-mode .toggle-icon{
 body.dark-mode .sidebar{
   background-color: #393636;
 }
-
+body.dark-mode .confirm-msg{
+  color:white;
+}
 body.dark-mode .admin-container {
   background-color: rgb(35, 32, 32);
   color: white;
