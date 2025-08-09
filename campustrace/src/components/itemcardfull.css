@@ -208,9 +208,6 @@ body.modal-open {
   margin-top: 40px;
   color:black;
 }
-.confirm-msg{
-  color: black;
-}
 
 .confirm-buttons {
   display: flex;
