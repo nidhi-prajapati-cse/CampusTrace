@@ -12,7 +12,9 @@ body.dark-mode .signupbox{
    background-color: rgb(88, 83, 83);
    color: white;
 }
-
+.confirm-msg{
+   color:grey;
+}
 body.dark-mode .logo-text{
   color: white;
 }
@@ -79,6 +81,9 @@ body.dark-mode .active{
 }
 body.dark-mode .chat-user{
   color: white;
+}
+.confirm-msg{
+   color:grey;
 }
 html {
   overflow-y: scroll;
