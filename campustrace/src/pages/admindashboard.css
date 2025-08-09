@@ -4,6 +4,9 @@
   margin-bottom: -70px;
   min-height: 100vh;
 }
+.confirm-msg{
+   color:grey;
+}
 
 @media (max-width: 480px) {
   .admin-container h2{
