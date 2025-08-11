@@ -24,19 +24,23 @@
   overflow-x: auto;
   scroll-behavior: smooth;
   gap: 20px;
-  padding: 20px;
+  padding: 20px 0px;
   margin: 0 auto;
   align-items: stretch;
-  justify-content: center;
- 
   flex:1;
+}
+.scroll-center-items {
+  justify-content: center;
+}
+
+.scroll-start-items {
+  justify-content: flex-start;
 }
 
 .items-scroll-container::-webkit-scrollbar {
   display: none;
 }
 
-/* ✅ Card size optimized */
 .items-scroll-container > * {
   flex: 0 0 auto;          
   width: 250px;            
