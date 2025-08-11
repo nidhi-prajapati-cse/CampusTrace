@@ -49,7 +49,9 @@ const RecentItems = () => {
       ) : (
         <div className="carousel-wrapper">
           <button className="scroll-btn left" onClick={() => scroll('left')}>&lt;</button>
-          <div className="items-scroll-container " ref={scrollRef}>
+          <div className={`items-scroll-container ${
+    recentItems.length <= 3 ? 'scroll-center-items' : 'scroll-start-items'
+  }`} ref={scrollRef}>
             {recentItems.map(item => (
               <ItemCard key={item._id} item={item} />
             ))}
