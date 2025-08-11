@@ -24,9 +24,9 @@ const ItemCard = ({ item }) => {
         <h3 className="itemtext-title">{item.itemName}</h3>
         <p className="item-location"><strong>Location:</strong>{item.location}</p>
         <p className="item-date"><strong>Date:</strong>{item.dateOfReport
-            ? new Date(item.dateOfReport).toISOString().split("T")[0]
+            ? new Date(item.dateOfReport).toLocaleDateString('en-GB')
             : item.createdAt
-              ? new Date(item.createdAt).toISOString().split("T")[0]
+              ? new Date(item.createdAt).toLocaleDateString('en-GB')
               : ""}</p>
         <p className='item-description'><strong>Description:</strong>{item.description}</p>
       </div>
