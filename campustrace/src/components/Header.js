@@ -17,8 +17,7 @@ const Header = ({ toggleSidebar }) => {
 
   const location = useLocation();
   const navigate = useNavigate();
-  const isUserPage = location.pathname === "/userdash";
-  const isAdminPage = location.pathname === "/admindash";
+  const isDashboardPage = location.pathname === "/dash";
   const [confirmlogout, setConfirmLogout] = useState(false);
 
   useEffect(() => {
@@ -63,7 +62,7 @@ const Header = ({ toggleSidebar }) => {
   };
 
 
-  const useroptions = (!isAdminPage && !isUserPage) ? (
+  const useroptions = (!isDashboardPage) ? (
     <div className="navbar-buttons">
       <div className="dark-toggle">
         <button onClick={() => setDarkMode(!darkMode)}>
@@ -73,11 +72,9 @@ const Header = ({ toggleSidebar }) => {
 
       {user ? (
         <>
-          {user.role === "admin" ? (
-            <button className="btna admindash" onClick={() => navigate('/admindash')}>AdminDash</button>
-          ) : (
-            <button className="btna userdash" onClick={() => navigate('/userdash')}>UserDash</button>
-          )}
+          
+            <button className="btna admindash" onClick={() => navigate('/dash')}>Dashboard</button>
+          
           <button className="btna logout-btn" onClick={handleLogout}>
             <FontAwesomeIcon icon={faSignOut} />
           </button>
@@ -96,8 +93,8 @@ const Header = ({ toggleSidebar }) => {
           <FontAwesomeIcon icon={faMoon} />
         </button>
       </div>
-      <p>{isAdminPage ? "Welcome, " : "Hello, "}
-        <strong>{user?.name || (isAdminPage ? "Admin" : "User")}</strong>
+      <p>{isDashboardPage? "Welcome, " : "Hello, "}
+        <strong>{user?.name}</strong>
       </p>
 
     </div>
@@ -107,7 +104,7 @@ const Header = ({ toggleSidebar }) => {
     <>
       <div className="header-container">
         <div className="left-header">
-          {(isAdminPage || isUserPage) && (
+          {(isDashboardPage) && (
             <button className="toggle-icon" onClick={toggleSidebar}>
               <FaBars size={22} />
             </button>
