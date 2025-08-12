@@ -16,11 +16,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 
-const AdminDashboard = () => {
+const Dashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("home");
   const navigate = useNavigate();
-  const { logout, user } = useContext(AuthContext); // <-- assuming user object has "role"
+  const { logout, user } = useContext(AuthContext); 
   const [confirmlogout, setConfirmLogout] = useState(false);
 
   useEffect(() => {
@@ -109,4 +109,4 @@ const AdminDashboard = () => {
   );
 };
 
-export default AdminDashboard;
+export default Dashboard;
