@@ -104,7 +104,7 @@ const ItemCardFull = ({ item, onDelete, showDelete, showFlag = true }) => {
               ? new Date(item.createdAt).toLocaleDateString('en-GB')
               : ""}</p>
           <p><strong>Location:</strong> {item.location}</p>
-          <p><strong>Description:</strong> {item.description}</p>
+          //<p><strong>Description:</strong> {item.description}</p>
           <p>
             <strong>{(item.itemType || '').toLowerCase() === "lost" ? "Lost by" : "Found by"}:</strong> {displayName}
           </p>
